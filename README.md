@@ -1,49 +1,39 @@
-<a href="https://livekit.io/">
-  <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
-</a>
+<img src="./.github/assets/app-icon.png" alt="Voice Assistant App Icon" width="100" height="100">
 
-# Python Multimodal Voice Agent
+# Web Voice Assistant
 
-<p>
-  <a href="https://cloud.livekit.io/projects/p_/sandbox"><strong>Deploy a sandbox app</strong></a>
-  •
-  <a href="https://docs.livekit.io/agents/overview/">LiveKit Agents Docs</a>
-  •
-  <a href="https://livekit.io/cloud">LiveKit Cloud</a>
-  •
-  <a href="https://blog.livekit.io/">Blog</a>
-</p>
+This is a starter template for [LiveKit Agents](https://docs.livekit.io/agents/overview/) that provides a simple voice interface using the [LiveKit JavaScript SDK](https://github.com/livekit/client-sdk-js).
 
-A basic example of a multimodal voice agent using LiveKit and the Python [Agents Framework](https://github.com/livekit/agents).
+This template is built with Next.js and is free for you to use or modify as you see fit.
 
-## Dev Setup
+![App screenshot](/.github/assets/frontend-screenshot.jpeg)
 
-Clone the repository and install dependencies to a virtual environment:
+## Getting started
 
-```console
-cd multimodal-agent-python
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+> [!TIP]
+> If you'd like to try this application without modification, you can deploy an instance in just a few clicks with [LiveKit Cloud Sandbox](https://cloud.livekit.io/projects/p_/sandbox/templates/voice-assistant-frontend).
 
-Set up the environment by copying `.env.example` to `.env.local` and filling in the required values:
-
-- `LIVEKIT_URL`
-- `LIVEKIT_API_KEY`
-- `LIVEKIT_API_SECRET`
-- `OPENAI_API_KEY`
-
-You can also do this automatically using the LiveKit CLI:
+Run the following command to automatically clone this template.
 
 ```bash
-lk app env
+lk app create --template voice-assistant-frontend
 ```
 
-Run the agent:
+Then run the app with:
 
-```console
-python3 agent.py dev
+```bash
+pnpm install
+pnpm dev
 ```
 
-This agent requires a frontend application to communicate with. You can use one of our example frontends in [livekit-examples](https://github.com/livekit-examples/), create your own following one of our [client quickstarts](https://docs.livekit.io/realtime/quickstarts/), or test instantly against one of our hosted [Sandbox](https://cloud.livekit.io/projects/p_/sandbox) frontends.
+And open http://localhost:3000 in your browser.
+
+You'll also need an agent to speak with. Try our sample voice assistant agent for [Python](https://github.com/livekit-examples/voice-pipeline-agent-python), [Node.js](https://github.com/livekit-examples/voice-pipeline-agent-node), or [create your own from scratch](https://docs.livekit.io/agents/quickstart/).
+
+> [!NOTE]
+> If you need to modify the LiveKit project credentials used, you can edit `.env.local` (copy from `.env.example` if you don't have one) to suit your needs.
+
+## Contributing
+
+This template is open source and we welcome contributions! Please open a PR or issue through GitHub, and don't forget to join us in the [LiveKit Community Slack](https://livekit.io/join-slack)!
+
